@@ -1,3 +1,14 @@
+# TEMP
+gzip() {
+ pigz "$@"
+}
+export -f gzip
+
+gunzip() {
+ unpigz "$@"
+}
+export -f gunzip
+
 ###################     System Settings      ########################
 
 # Prompt
@@ -11,6 +22,7 @@ export PYTHONPATH="/usr/local/lib/python2.7/site-packages/:$PYTHONPATH"
 #export PATH=/usr/local/php5/bin/:$PATH
 export PATH=/usr/local/Cellar/php56/5.6.29_5/bin:$PATH
 
+alias ruby='/usr/local/Cellar/ruby/2.4.1_1/bin/ruby'
 #######################      Aliases     ##########################
 
 # Git
@@ -33,8 +45,10 @@ alias bdinfo='mono /usr/local/dantools/BDInfoCLI.exe'
 alias seeso='/usr/local/dantools/seeso.sh'
 alias youtube-mp3='youtube-dl --extract-audio --audio-format mp3'
 eval "$(thefuck --alias)"
-alias emailgrep='/usr/local/dantools/emailgrep.sh'
+alias domaingrep="ggrep -Eo '(([a-zA-Z](-?[a-zA-Z0-9])*)\.)*[a-zA-Z](-?[a-zA-Z0-9])+\.[a-zA-Z]{2,}'"
+alias emailgrep="grep -Eiorh '([[:alnum:]_.-]+@[[:alnum:]_.-]+?\.[[:alpha:].]{2,6})'"
 alias chmox='chmod +x'
+alias cls='clear && ls'
 
 # Typos
 alias celar='clear'
