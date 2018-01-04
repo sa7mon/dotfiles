@@ -1,7 +1,10 @@
 ###################     System Settings      ########################
 
-# Prompt
-PS1="[\e[0;32m\u@\h\e[m] \e[0;36m\W\e[m \$ "  # Set prompt with color
+# Prompt - https://stackoverflow.com/a/2774197
+green=$(tput setaf 2)
+blue=$(tput setaf 6)
+reset=$(tput sgr0)
+PS1='\[$green\]\h\[$reset\]:\[$blue\]\w\[$reset\] \$ '
 
 # Path (Lower lines take precedence)
 export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
@@ -19,9 +22,11 @@ export EDITOR='subl -w'
 # Git
 alias gs='git status'
 alias gaa='git add --all'
+alias gc='git commit -m'
 alias gp='git push origin master'
 alias gr='git reset'
 alias gd='git diff'
+alias gl='git log'
 
 # Remotes
 alias freenas='ssh root@10.0.1.153'
@@ -43,6 +48,9 @@ alias chmox='chmod +x'
 alias cls='clear && ls'
 alias lh='ls -alh'
 alias ls10='ls | head -n 10'
+
+alias ls='gls --color=auto' # Use GNU ls with auto coloring
+alias ll='gls --color=auto -alh' # Use GNU ls with auto coloring, show hidden items, long listing, size in "human readable" format
 
 
 # Override gzip with pigz for multi-core zipping
