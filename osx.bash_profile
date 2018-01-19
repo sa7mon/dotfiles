@@ -23,7 +23,7 @@ export EDITOR='subl -w'
 alias gs='git status'
 alias gaa='git add --all'
 alias gc='git commit -m'
-alias gp='git push origin master'
+alias gp='git push'
 alias gr='git reset'
 alias gd='git diff'
 alias gl='git log'
@@ -32,6 +32,7 @@ alias gl='git log'
 alias freenas='ssh root@10.0.1.153'
 alias vps='ssh root@159.203.58.173'
 alias raspi='ssh pi@10.0.1.89'
+alias backubuntu='ssh backubuntu@10.0.1.166'
 
 # System
 alias rsynccopy='rsync --partial --progress --append --rsh=ssh -r -h '
@@ -46,6 +47,7 @@ alias domaingrep="ggrep -Eo '(([a-zA-Z](-?[a-zA-Z0-9])*)\.)*[a-zA-Z](-?[a-zA-Z0-
 alias emailgrep="grep -Eiorh '([[:alnum:]_.-]+@[[:alnum:]_.-]+?\.[[:alpha:].]{2,6})'"
 alias chmox='chmod +x'
 alias cls='clear && ls'
+alias c='clear'
 alias lh='ls -alh'
 alias ls10='ls | head -n 10'
 
@@ -71,3 +73,30 @@ alias pyhton='python'
 alias weather='curl http://wttr.in'
 
 ##############################################################
+
+# direnv settings
+
+eval "$(direnv hook bash)"
+
+show_virtual_env() {
+  if [ -n "$VIRTUAL_ENV" ]; then
+    echo "($(basename $VIRTUAL_ENV))"
+  fi
+}
+
+PS1='$(show_virtual_env)'$PS1
+
+layout_anaconda() {
+  local env_name="$1"
+  local ANACONDA_HOME="/Volumes/DATA/programs/anaconda3/"
+  PATH_add "$ANACONDA_HOME"/bin
+  source activate ${env_name}
+}
+
+
+
+########################################
+
+#Docker
+eval "$(docker-machine env default)"
+
