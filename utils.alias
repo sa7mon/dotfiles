@@ -1,0 +1,10 @@
+alias rsynccopy='rsync --partial --progress --append --rsh=ssh -r -h '
+alias rsyncmove='rsync --partial --progress --append --rsh=ssh -r -h --remove-sent-files'
+
+alias chmox='chmod +x'
+alias cls='clear && ls'
+alias c='clear'
+alias ll='ls --color=auto -alh'
+alias ls10='ls | head -n 10'
+
+alias emailgrep="grep -Eiorh '([[:alnum:]_.-]+@[[:alnum:]_.-]+?\.[[:alpha:].]{2,6})'"

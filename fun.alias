@@ -1,0 +1,2 @@
+alias weather='curl http://wttr.in'
+alias youtube-mp3='youtube-dl --extract-audio --audio-format mp3'
