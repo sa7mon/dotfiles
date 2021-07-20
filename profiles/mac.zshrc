@@ -16,3 +16,6 @@
 
 # functions
 . ~/dotfiles/functions/command_time.zsh
+
+# options
+. ~/dotfiles/zsh.options
