@@ -1,4 +1,2 @@
 PROMPT="╭─%n@%m %F{green}%~%f
 ╰─%B$%b "
-
-RPROMPT=''

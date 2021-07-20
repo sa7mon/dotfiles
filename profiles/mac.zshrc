@@ -14,4 +14,5 @@
 # nix
 . /Users/dsalmon/.nix-profile/etc/profile.d/nix.sh
 
-. ~/dotfiles/command_time.zsh
+# functions
+. ~/dotfiles/functions/command_time.zsh
