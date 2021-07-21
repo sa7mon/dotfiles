@@ -1,2 +1,6 @@
+# Make the history file hugely long
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
+
+# Share history between all terminals
+setopt share_history
