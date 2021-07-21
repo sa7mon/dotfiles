@@ -4,3 +4,9 @@ SAVEHIST=$HISTSIZE
 
 # Share history between all terminals
 setopt share_history
+
+# Set language
+export LANG=en_US.UTF-8
+
+# Disable bell
+unsetopt BEEP
