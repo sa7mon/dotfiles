@@ -19,3 +19,8 @@
 
 # options
 . ~/dotfiles/zsh.options
+
+# Mac Laptop specific
+# Docker alternate storage location
+export MACHINE_STORAGE_PATH="/Volumes/DATA/docker-machine/machine"
+export DOCKER_CERT_PATH="/Volumes/DATA/docker-machine/machine"
