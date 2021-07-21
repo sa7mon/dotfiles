@@ -7,8 +7,3 @@ alias projects='cd /Volumes/DATA/Projects'
 alias htop='sudo htop' # Otherwise it's useless
 alias fixvmware='sudo kextunload -b com.github.osxfuse.filesystems.osxfuse'
 alias bdinfo='mono /usr/local/dantools/BDInfoCLI.exe'
-
-# Docker alternate storage location
-export MACHINE_STORAGE_PATH="/Volumes/DATA/docker-machine/machine"
-export DOCKER_CERT_PATH="/Volumes/DATA/docker-machine/machine"
-
