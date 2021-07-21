@@ -1,0 +1,5 @@
+alias dcd='docker-compose down'
+alias dcu='docker-compose up -d'
+alias dcb='docker-compose build'
+alias dcps='docker-compose ps'
+alias dclf='docker-compose logs -f'
