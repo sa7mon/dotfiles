@@ -10,3 +10,8 @@ export LANG=en_US.UTF-8
 
 # Disable bell
 unsetopt BEEP
+
+# Fix key bindings for Home, End, Delete
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
