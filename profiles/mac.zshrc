@@ -1,12 +1,12 @@
 # paths
-. ~/dotfiles/macos.path
+. ~/dotfiles/macos/macos.path
 
 # aliases
-. ~/dotfiles/macos.alias
-. ~/dotfiles/utils.alias
+. ~/dotfiles/macos/macos.alias
+. ~/dotfiles/utils/utils.alias
 . ~/dotfiles/git/git.alias
 . ~/dotfiles/fun/fun.alias
-. ~/dotfiles/typos.alias
+. ~/dotfiles/utils/typos.alias
 . ~/dotfiles/docker/docker.alias
 
 # nix
@@ -17,10 +17,10 @@
 . ~/dotfiles/git/git.zsh
 
 # options
-. ~/dotfiles/zsh.options
+. ~/dotfiles/zsh/zsh.options
 
 # Prompt
-. ~/dotfiles/zsh.prompt
+. ~/dotfiles/zsh/zsh.prompt
 
 
 # Mac Laptop specific
