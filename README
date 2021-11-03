@@ -1,4 +1,0 @@
-# dotfiles
-
-These are my personal dotfiles. aliases, functions, and options are split into directories according to what they relate to.
-Full profiles and resource (rc) scripts are located in `/profiles/`.
