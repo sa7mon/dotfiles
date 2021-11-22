@@ -1,3 +1,6 @@
+# Set history file
+HISTFILE=~/.zsh_history
+
 # Make the history file hugely long
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
