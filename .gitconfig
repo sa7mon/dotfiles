@@ -1,0 +1,9 @@
+[user]
+        name = Dan Salmon
+        email = dan@salmon.cat
+[init]
+        defaultBranch = main
+[pull]
+        rebase = false
+[push]
+        default = current
