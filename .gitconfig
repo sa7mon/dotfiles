@@ -7,3 +7,4 @@
         rebase = false
 [push]
         default = current
+        autoSetupRemote = true # Automatically setup remote when pushing new branch
