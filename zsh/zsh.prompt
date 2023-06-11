@@ -1,4 +1,4 @@
 setopt prompt_subst
 
-PROMPT='╭─%F{cyan}%B%n@%m%F{reset_color} %F{green}%~%f%b ${vcs_info_msg_0_}
+PROMPT='╭─[%F{blue}%B%n%F{reset_color}%F{magenta} %m%F{reset_color}] %F{38;5;12}%~%f%b %F{yellow}${vcs_info_msg_0_}%F{reset_color}
 ╰─%B$%b '

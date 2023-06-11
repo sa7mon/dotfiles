@@ -3,7 +3,5 @@ alias ls=gls
 
 alias domaingrep="ggrep -Eo '(([a-zA-Z](-?[a-zA-Z0-9])*)\.)*[a-zA-Z](-?[a-zA-Z0-9])+\.[a-zA-Z]{2,}'"
 
-alias projects='cd /Volumes/DATA/Projects'
 alias htop='sudo htop' # Otherwise it's useless
-alias fixvmware='sudo kextunload -b com.github.osxfuse.filesystems.osxfuse'
-alias bdinfo='mono /usr/local/dantools/BDInfoCLI.exe'
+alias ports='sudo lsof -i -P | grep LISTEN'
