@@ -1,7 +1,11 @@
 # Path (Lower lines take precedence)
-export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
-export PATH=/usr/local/Cellar/php56/5.6.29_5/bin:$PATH
-export PATH="/usr/local/bin:$PATH" # This is where all Homebrew symlinks are
-export PATH="~/go/bin:$PATH" # Go binaries
+#export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
+#export PATH=/usr/local/Cellar/php56/5.6.29_5/bin:$PATH
+#export PATH="/usr/local/bin:$PATH" # This is where all Homebrew symlinks are
+#export PATH="~/go/bin:$PATH" # Go binaries
 
-export PYTHONPATH="/usr/local/bin/python3"
+#export PYTHONPATH="/usr/local/bin/python3"
+
+export PATH="/opt/homebrew/bin/:$PATH"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"

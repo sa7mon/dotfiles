@@ -1,7 +1,2 @@
 # Use GNU ls instead of BSD
-alias ls=gls
-
-alias domaingrep="ggrep -Eo '(([a-zA-Z](-?[a-zA-Z0-9])*)\.)*[a-zA-Z](-?[a-zA-Z0-9])+\.[a-zA-Z]{2,}'"
-
-alias htop='sudo htop' # Otherwise it's useless
-alias ports='sudo lsof -i -P | grep LISTEN'
+alias ls='gls --color=auto'
