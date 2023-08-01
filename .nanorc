@@ -1,0 +1,5 @@
+## If you wish, you may put your syntax definitions in separate files.
+## You can make use of such files as follows:
+##
+## include "/path/to/syntax_file.nanorc"
+include "~/dotfiles/nano/*.nanorc"
