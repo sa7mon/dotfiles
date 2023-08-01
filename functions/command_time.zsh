@@ -1,13 +1,10 @@
 # Source: https://github.com/popstas/zsh-command-time
 
-# If command execution time above min. time, plugins will not output time.
-ZSH_COMMAND_TIME_MIN_SECONDS=0
-
 # Message to display (set to "" for disable).
 ZSH_COMMAND_TIME_MSG="%s "
 
 # Message color.
-ZSH_COMMAND_TIME_COLOR="cyan"
+ZSH_COMMAND_TIME_COLOR="38;15;8"
 
 # Exclude some commands
 ZSH_COMMAND_TIME_EXCLUDE=(vim mcedit nano)
@@ -19,7 +16,6 @@ _command_time_preexec() {
     cmd="$1"
     for exc ($ZSH_COMMAND_TIME_EXCLUDE) do;
       if [ "$(echo $cmd | grep -c "$exc")" -gt 0 ]; then
-        # echo "command excluded: $exc"
         return
       fi
     done
@@ -27,14 +23,13 @@ _command_time_preexec() {
 
   timer=${timer:-$SECONDS}
   ZSH_COMMAND_TIME_MSG=${ZSH_COMMAND_TIME_MSG-"Time: %s"}
-  ZSH_COMMAND_TIME_COLOR=${ZSH_COMMAND_TIME_COLOR-"white"}
   export ZSH_COMMAND_TIME=""
 }
 
 _command_time_precmd() {
   if [ $timer ]; then
     timer_show=$(($SECONDS - $timer))
-    if [ -n "$TTY" ] && [ $timer_show -ge ${ZSH_COMMAND_TIME_MIN_SECONDS:-3} ]; then
+    if [ -n "$TTY" ]; then
       export ZSH_COMMAND_TIME="$timer_show"
       if [ ! -z ${ZSH_COMMAND_TIME_MSG} ]; then
         zsh_command_time
@@ -44,10 +39,19 @@ _command_time_precmd() {
   fi
 }
 
-zsh_command_time() {
+zsh_command_time() { 
   if [ -n "$ZSH_COMMAND_TIME" ]; then
-    timer_show=$(printf '%dh:%02dm:%02ds\n' $(($ZSH_COMMAND_TIME/3600)) $(($ZSH_COMMAND_TIME%3600/60)) $(($ZSH_COMMAND_TIME%60)))
-    #print -P "%F{$ZSH_COMMAND_TIME_COLOR}$(printf "${ZSH_COMMAND_TIME_MSG}\n" "$timer_show")%f"
+    hours=$(($ZSH_COMMAND_TIME/3600))
+    min=$(($ZSH_COMMAND_TIME/60))
+    sec=$(($ZSH_COMMAND_TIME%60))
+    timer_show=''
+    if [ "$hours" -gt 0 ]; then 
+      timer_show=$(printf '%dh:%02dm:%02ds\n' $hours $min $sec)
+    elif [ "$min" -gt 0 ]; then
+      timer_show=$(printf '%02dm:%02ds\n' $min $sec)
+    elif [ "$sec" -gt 1 ]; then
+      timer_show=$(printf '%2ds\n' $sec)
+    fi
     export ZSH_LAST_COMMAND_TIME="$(printf "${ZSH_COMMAND_TIME_MSG}\n" "$timer_show")"
   fi
 }
