@@ -3,3 +3,33 @@
 ##
 ## include "/path/to/syntax_file.nanorc"
 include "~/dotfiles/nano/*.nanorc"
+
+# Scroll the buffer contents per half-screen instead of per line.
+set jumpyscrolling
+
+# Display line numbers to the left of the text area.  (Any line with an anchor additionally gets a mark in the margin.)
+set linenumbers
+
+# Enable mouse support, if available for your system.  When enabled, mouse clicks can be used to place the cursor, set the mark (with a double click), and execute shortcuts.
+set mouse
+
+# Display a "scrollbar" on the righthand side of the edit window.  It shows the position of the viewport in the buffer and how much of the buffer is covered by the viewport.
+set indicator
+
+# Bind Option+Left to "Previous Word"
+unbind M-B all
+bind M-B prevword main
+
+# Bind Option+Right to "Next Word"
+unbind M-F all
+bind M-F nextword main
+
+# Bind Option+Del to "cut next word"
+unbind M-D all
+bind M-D chopwordright main
+
+# Pretty colors
+set titlecolor white,gray
+set keycolor white
+set functioncolor gray
+set numbercolor magenta
