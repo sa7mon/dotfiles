@@ -1,0 +1,7 @@
+--embed-chapters
+--merge-output-format "mkv/mp4"
+--embed-subs
+--write-subs
+--sub-format "srt"
+--embed-thumbnail
+--embed-metadata
