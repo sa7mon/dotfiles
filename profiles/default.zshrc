@@ -1,3 +1,5 @@
+SECRET_PATH=~/.secret
+
 # aliases
 . ~/dotfiles/utils/utils.alias
 . ~/dotfiles/git/git.alias
@@ -14,3 +16,6 @@
 
 # Prompt
 . ~/dotfiles/zsh/zsh.prompt
+
+# secrets
+. ~/dotfiles/secret/export_secrets.zsh
